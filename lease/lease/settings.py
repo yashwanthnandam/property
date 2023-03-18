@@ -57,7 +57,7 @@ MIDDLEWARE = [
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'postg',
+       'NAME': 'postgres',
        'USER': 'postgres',
        'PASSWORD': 'Yn1129405+',
        'HOST': 'property.ci4zkzpqeboi.eu-north-1.rds.amazonaws.com',
