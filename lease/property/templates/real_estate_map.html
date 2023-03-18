@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'property.css' %}">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <script src="https://maps.googleapis.com/maps/api/js?key={{key}}&callback=initMap&v=weekly"
+    defer
+    ></script>
+    <title>Real Estate Map</title>
+  </head>
+<body onload="initMap()">
+  <div id="map" style="width: 100%; height: 1000px;"></div>
+  <div id="right-half-container">
+  <div id="data-container">
+  </div>
+</div>
+    <script>
+
+var map;
+var markers = [];
+
+function initMap() {
+  var properties = {{ properties|safe }};
+  var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(28.4595, 77.0266)
+  });
+
+
+      for (var i = 0; i < properties.length; i++) {
+        var latLng = new google.maps.LatLng(properties[i].lat, properties[i].lng);
+        var marker = new google.maps.Marker({
+          position: latLng,
+          map: map
+        }
+        );
+        var infoWindow = new google.maps.InfoWindow();
+
+        marker.addListener("mouseover", function(marker, i) {
+          return function() {
+            console.log("click event triggered");
+            var content = "Price: " + properties[i].price + "<br>Bedrooms: " + properties[i].bedroomNum + "<br>Bathrooms: " + properties[i].bathroomNum + "<br>Area: " + properties[i].area;
+            infoWindow.setContent(content);
+            infoWindow.open(map, marker);
+          };
+        }(marker, i));
+
+
+
+        marker.addListener("dblclick", function(marker, i) {
+          return function() {
+            console.log("Marker clicked");
+            var endpoint = "http://127.0.0.1:8003/get_properties/?id=" + properties[i].id;
+
+            fetch(endpoint)
+              .then(response => response.json())
+              .then(data => {
+                data = properties
+                var dataContainer = document.getElementById("data-container");
+                dataContainer.innerHTML = "";
+                var table = document.createElement("table");
+                var headerRow = document.createElement("tr");
+                var headerCell1 = document.createElement("th");
+                headerCell1.innerHTML = "ID";
+                headerRow.appendChild(headerCell1);
+                var headerCell2 = document.createElement("th");
+                headerCell2.innerHTML = "Price";
+                headerRow.appendChild(headerCell2);
+                var headerCell3 = document.createElement("th");
+                headerCell3.innerHTML = "Bedrooms";
+                headerRow.appendChild(headerCell3);
+                var headerCell4 = document.createElement("th");
+                headerCell4.innerHTML = "Bathrooms";
+                headerRow.appendChild(headerCell4);
+                var headerCell5 = document.createElement("th");
+                headerCell5.innerHTML = "Property Type";
+                headerRow.appendChild(headerCell5);
+                var headerCell6 = document.createElement("th");
+                headerCell6.innerHTML = "Locality";
+                headerRow.appendChild(headerCell6);
+                var headerCell7 = document.createElement("th");
+                headerCell7.innerHTML = "Furnish";
+                headerRow.appendChild(headerCell7);
+                var headerCell8 = document.createElement("th");
+                headerCell8.innerHTML = "Area";
+                headerRow.appendChild
+                (headerCell8);
+                var headerCell9 = document.createElement("th");
+                headerCell9.innerHTML = "City";
+                headerRow.appendChild(headerCell9);
+                table.appendChild(headerRow);
+
+                var row = document.createElement("tr");
+                var cell1 = document.createElement("td");
+                cell1.innerHTML = data[i].id;
+                row.appendChild(cell1);
+                var cell2 = document.createElement("td");
+                cell2.innerHTML = data[i].price;
+                row.appendChild(cell2);
+                var cell3 = document.createElement("td");
+                cell3.innerHTML = data[i].bedroomNum;
+                row.appendChild(cell3);
+                var cell4 = document.createElement("td");
+                cell4.innerHTML = data[i].bathroomNum;
+                row.appendChild(cell4);
+                table.appendChild(row);
+                var cell5 = document.createElement("td");
+                cell5.innerHTML = data[i].property_type;
+                row.appendChild(cell5);
+                var cell6 = document.createElement("td");
+                cell6.innerHTML = data[i].locality;
+                row.appendChild(cell6);
+                var cell7 = document.createElement("td");
+                cell7.innerHTML = data[i].furnish;
+                row.appendChild(cell7);
+                var cell8 = document.createElement("td");
+                cell8.innerHTML = data[i].area;
+                row.appendChild(cell8);
+                var cell9 = document.createElement("td");
+                cell9.innerHTML = data[i].city;
+                row.appendChild(cell9);
+                console.log(data[i])
+                dataContainer.appendChild(table);
+              });
+          };
+        }(marker, i));
+
+
+
+
+
+
+
+
+  }
+}
+
+
+
+</script>
+  </body>
+</html>

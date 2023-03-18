@@ -1,0 +1,18 @@
+.property-detail-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
+  }
+  
+
+  
+  .property-card {
+    background-color: #fff; /* set the background color to white */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  

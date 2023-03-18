@@ -1,0 +1,20 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="backend.odoo_functions.create_procurement_manager_vendor.create_attachment" />
+          <option value="backend.odoo_functions.get_return_delivery_details.get_dispatch_voucher" />
+          <option value="backend.odoo_functions.get_return_delivery_details.asyncio" />
+          <option value="dropcards.uploader.views.ocr" />
+          <option value="addons.fnf_account.models.account_invoice.etree" />
+          <option value="supply_aggregation.models.supply_aggregation_parameters.VendorTypeChoices" />
+          <option value="test.tasks.start_trade_strategy.Signal" />
+          <option value="my_trade.celery_app.settings" />
+          <option value="output_marketplace.users.models.user.UserManager" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

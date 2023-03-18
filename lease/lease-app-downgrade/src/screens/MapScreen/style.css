@@ -1,0 +1,48 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #fff;
+  }
+  
+  #app-container {
+    position: relative;
+    height: 100%;
+  }
+  
+  .search-bar-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #f2f2f2;
+    padding: 1rem;
+  }
+  .search-bar-buttons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .map-container {
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    bottom: 0;
+    width: 69%;
+  }
+  
+  .property-detail-container {
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    background-color: #f2f2f2;
+    padding: 1rem;
+    overflow: scroll;
+  }
+  
+  .map {
+    height: 100%;
+  }
+  
