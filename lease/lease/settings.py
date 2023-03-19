@@ -24,9 +24,9 @@ SECRET_KEY = "django-insecure-o+3*0eq7yj-f70$v#%((+v43q)$qq1b7y4_a0i=w2$m(*@q5um
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+SECURE_SSL_REDIRECT = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -90,7 +90,8 @@ WSGI_APPLICATION = "lease.wsgi.application"
 CORS_ORIGIN_WHITELIST = [
      'http://localhost:3000',
     'http://localhost:8003',
-    'https://13.50.14.134'
+    'https://13.50.14.134',
+    'https://13.50.14.134:8003'
 ]
 
 
