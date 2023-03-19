@@ -37,7 +37,7 @@ const MapContainer = (props) => {
       const fetchProperties = async () => {
         try {
           
-          const response = await fetch(`http://127.0.0.1:8003/property/get_properties/?page_size=50&latitude_min=${mapBounds.southWest.lat}&latitude_max=${mapBounds.northEast.lat}&longitude_min=${mapBounds.southWest.lng}&longitude_max=${mapBounds.northEast.lng}&search=${searchTerm}&price_min=${searchFilters.minPrice}&price_max=${searchFilters.maxPrice}&bedroom_num=${searchFilters.noBeds}&bathroomNum=${searchFilters.noBaths}&property_type=${searchFilters.propertyType}&buy=${searchFilters.buy}&rent=${searchFilters.rent}`);
+          const response = await fetch(`http://13.50.14.134:8003/property/get_properties/?page_size=50&latitude_min=${mapBounds.southWest.lat}&latitude_max=${mapBounds.northEast.lat}&longitude_min=${mapBounds.southWest.lng}&longitude_max=${mapBounds.northEast.lng}&search=${searchTerm}&price_min=${searchFilters.minPrice}&price_max=${searchFilters.maxPrice}&bedroom_num=${searchFilters.noBeds}&bathroomNum=${searchFilters.noBaths}&property_type=${searchFilters.propertyType}&buy=${searchFilters.buy}&rent=${searchFilters.rent}`);
           const data = await response.json();
           console.log(mapBounds)
           const properties = data.properties;
