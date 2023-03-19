@@ -133,7 +133,6 @@ if socket.gethostname()=='nandams-MacBook-Pro-8.local':
     CSRF_COOKIE_SECURE = False
     SECURE_SSL_REDIRECT = False
     DEBUG = True
-    ACCOUNT_DEFAULT_HTTP_PROTOCOL = "http"
 else:
     CORS_REPLACE_HTTPS_REFERER = False
     SECURE_PROXY_SSL_HEADER = None
@@ -143,8 +142,8 @@ else:
     SECURE_HSTS_SECONDS = None
     SECURE_HSTS_INCLUDE_SUBDOMAINS = False
     SECURE_FRAME_DENY = False
-    DEBUG = False
-    ACCOUNT_DEFAULT_HTTP_PROTOCOL = "http"
+    DEBUG = True
+print(SECURE_SSL_REDIRECT)
 
 
 
