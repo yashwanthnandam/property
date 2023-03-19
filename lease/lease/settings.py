@@ -88,6 +88,9 @@ WSGI_APPLICATION = "lease.wsgi.application"
 CORS_ORIGIN_WHITELIST = [
      'http://localhost:3000',
     'http://localhost:8003',
+    'http://0.0.0.0:8003',
+    "http://127.0.0.1:8003",
+    'http://0.0.0.0',
     'https://13.50.14.134',
     'https://13.50.14.134:8003'
 ]
