@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-o+3*0eq7yj-f70$v#%((+v43q)$qq1b7y4_a0i=w2$m(*@q5um"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
 
 
 ALLOWED_HOSTS = ['*']
@@ -142,10 +142,12 @@ if socket.gethostname()=='nandams-MacBook-Pro-8.local':
     SESSION_COOKIE_SECURE = False
     CSRF_COOKIE_SECURE = False
     SECURE_SSL_REDIRECT = False
+    DEBUG = True
 else:
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
     SECURE_SSL_REDIRECT = True
+    DEBUG = False
 
 
 
