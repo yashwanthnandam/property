@@ -143,6 +143,7 @@ if socket.gethostname()=='nandams-MacBook-Pro-8.local':
     CSRF_COOKIE_SECURE = False
     SECURE_SSL_REDIRECT = False
     DEBUG = True
+    ACCOUNT_DEFAULT_HTTP_PROTOCOL = "http"
 else:
     CORS_REPLACE_HTTPS_REFERER = False
     HOST_SCHEME = "http://"
@@ -154,6 +155,7 @@ else:
     SECURE_HSTS_INCLUDE_SUBDOMAINS = False
     SECURE_FRAME_DENY = False
     DEBUG = False
+    ACCOUNT_DEFAULT_HTTP_PROTOCOL = "http"
 
 
 
