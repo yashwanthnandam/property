@@ -85,9 +85,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "lease.wsgi.application"
-CORS_ORIGIN_WHITELIST = [
-'*'
-]
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 
