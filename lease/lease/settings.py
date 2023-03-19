@@ -86,15 +86,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "lease.wsgi.application"
 CORS_ORIGIN_WHITELIST = [
-     'http://localhost:3000',
-    'http://localhost:8003',
-    'http://0.0.0.0:8003',
-    "http://127.0.0.1:8003",
-    'http://0.0.0.0',
-    'http://13.50.14.134',
-    'http://13.50.14.134:8003',
-    'https://13.50.14.134:8003',
-    'https://13.50.14.134'
+'*'
 ]
 
 
@@ -146,7 +138,6 @@ if socket.gethostname()=='nandams-MacBook-Pro-8.local':
     ACCOUNT_DEFAULT_HTTP_PROTOCOL = "http"
 else:
     CORS_REPLACE_HTTPS_REFERER = False
-    HOST_SCHEME = "http://"
     SECURE_PROXY_SSL_HEADER = None
     SECURE_SSL_REDIRECT = False
     SESSION_COOKIE_SECURE = False
