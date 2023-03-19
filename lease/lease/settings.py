@@ -136,7 +136,7 @@ if socket.gethostname()=='nandams-MacBook-Pro-8.local':
 else:
     CORS_REPLACE_HTTPS_REFERER = False
     SECURE_PROXY_SSL_HEADER = None
-    SECURE_SSL_REDIRECT = True
+    SECURE_SSL_REDIRECT = False
     SESSION_COOKIE_SECURE = False
     CSRF_COOKIE_SECURE = False
     SECURE_HSTS_SECONDS = None
