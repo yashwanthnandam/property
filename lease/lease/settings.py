@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -122,7 +123,7 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'lease-app-downgrade/build/static'),
 )
-
+STATIC_ROOT = "/var/www/ghardhuundo/lease-app-downgrade/build/static/"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
@@ -134,16 +135,8 @@ if socket.gethostname()=='nandams-MacBook-Pro-8.local':
     SECURE_SSL_REDIRECT = False
     DEBUG = True
 else:
-    CORS_REPLACE_HTTPS_REFERER = False
-    SECURE_PROXY_SSL_HEADER = None
-    SECURE_SSL_REDIRECT = False
-    SESSION_COOKIE_SECURE = False
-    CSRF_COOKIE_SECURE = False
-    SECURE_HSTS_SECONDS = None
-    SECURE_HSTS_INCLUDE_SUBDOMAINS = False
-    SECURE_FRAME_DENY = False
     DEBUG = True
-print(SECURE_SSL_REDIRECT)
+
 
 
 
