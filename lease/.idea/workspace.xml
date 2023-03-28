@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba765ac1-e863-4f5b-b063-34e8953d7d9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lease-app-downgrade/public/ghar_logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/build/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/build/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/build/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/build/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/public/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lease-front/google-maps-intro" beforeDir="false" afterPath="$PROJECT_DIR$/lease-front/google-maps-intro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lease-front/google-maps-intro/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/lease-front/google-maps-intro/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lease-front/google-maps-intro/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/lease-front/google-maps-intro/yarn.lock" afterDir="false" />
