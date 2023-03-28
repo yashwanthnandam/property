@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba765ac1-e863-4f5b-b063-34e8953d7d9c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lease-app-downgrade/public/ghar_logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/build/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/build/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/build/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/build/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/public/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lease-front/google-maps-intro" beforeDir="false" afterPath="$PROJECT_DIR$/lease-front/google-maps-intro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lease-front/google-maps-intro/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/lease-front/google-maps-intro/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lease-front/google-maps-intro/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/lease-front/google-maps-intro/yarn.lock" afterDir="false" />
@@ -32,10 +39,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lease-app-downgrade/public" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lease-app-downgrade/public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/" />
     </key>
