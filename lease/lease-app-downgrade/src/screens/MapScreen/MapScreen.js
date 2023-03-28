@@ -18,7 +18,7 @@ const MapContainer = (props) => {
     getSouthWest: () => ({ lat: null, lng: null }),
     getNorthEast: () => ({ lat: null, lng: null })
   });
-  
+
   const [searchTerm, setSearchTerm] = useState('');
   const [searchFilters, setSearchFilters] = useState({
     minPrice: '',
@@ -36,7 +36,7 @@ const MapContainer = (props) => {
     if (isSearchTriggered) {
       const fetchProperties = async () => {
         try {
-          
+
           const response = await fetch(`https://ghardhuundo.in/property/get_properties/?page_size=50&latitude_min=${mapBounds.southWest.lat}&latitude_max=${mapBounds.northEast.lat}&longitude_min=${mapBounds.southWest.lng}&longitude_max=${mapBounds.northEast.lng}&search=${searchTerm}&price_min=${searchFilters.minPrice}&price_max=${searchFilters.maxPrice}&bedroom_num=${searchFilters.noBeds}&bathroomNum=${searchFilters.noBaths}&property_type=${searchFilters.propertyType}&buy=${searchFilters.buy}&rent=${searchFilters.rent}`);
           const data = await response.json();
           console.log(mapBounds)
@@ -51,7 +51,7 @@ const MapContainer = (props) => {
       fetchProperties();
     }
   }, [isSearchTriggered, mapBounds, searchTerm, searchFilters]);
-  
+
 
   const onMarkerClick = (property, marker, e) => {
     setSelectedProperty(property);
@@ -77,7 +77,7 @@ const MapContainer = (props) => {
     setCenter(center);
     console.log(center)
   };
-  
+
   const onClose = () => {
     if (activeMarker !== null) {
       setActiveMarker(null);
@@ -96,19 +96,19 @@ const MapContainer = (props) => {
     }, 500),
     []
   );
-  
+
 
   const memoizedPropertiesMap = memoize((properties, selectedPropertyId, onMarkerClick, blueMarkerIcon, icon, googleMapsSize) => {
     return properties.map(property => {
       const isSelected = selectedPropertyId === property.id;
       const markerIcon = isSelected ? blueMarkerIcon : icon;
-  
+
       return (
         <CustomMarker
           key={property.id}
           position={{ lat: property.latitude, lng: property.longitude }}
           onClick={(marker, e) => onMarkerClick(property, marker, e)}
-              
+
           icon={{
             url: markerIcon,
             scaledSize: new googleMapsSize(30, 30),
@@ -122,14 +122,14 @@ const MapContainer = (props) => {
       );
     });
   });
-  
+
   // Usage
   const propertiesMap = memoizedPropertiesMap(properties, selectedPropertyId, onMarkerClick, blueMarkerIcon, icon, props.google.maps.Size);
-  
+
   return (
     <div style={{ position: "relative", height: "100vh", backgroundColor: "white" }}>
   <div style={{ position: "relative", top: 0, left: 0, right: 0, backgroundColor: "white", padding: "1rem" }}>
-    <SearchBar onSearch={(term, filters) => handleSearch(term, filters, properties)} 
+    <SearchBar onSearch={(term, filters) => handleSearch(term, filters, properties)}
                onSelect={(center) => handleSelect( properties, center)}
     />
   </div>
@@ -145,7 +145,7 @@ const MapContainer = (props) => {
     >
 
     {propertiesMap}
-      
+
 
       {selectedProperty && showingInfoWindow && activeMarker && (
         <InfoWindow
@@ -157,12 +157,16 @@ const MapContainer = (props) => {
           onMouseover={() => setShowingInfoWindow(true)}
           onMouseout={() => setShowingInfoWindow(false)}
         >
-          <div>
-            <p>Price: {selectedProperty.price}</p>
-            <p>Bedrooms: {selectedProperty.bedroom_num}</p>
-            <p>Bathrooms: {selectedProperty.bathroomNum}</p>
-            <p>Area: {selectedProperty.area}</p>
-          </div>
+     <div>
+          <p>Price: {selectedProperty.price}</p>
+          <p>Bedrooms: {selectedProperty.bedroom_num}</p>
+          <p>Bathrooms: {selectedProperty.bathroomNum}</p>
+          <p>Area: {selectedProperty.area}</p>
+          <p>
+            url: <a href={`https://www.google.com/maps/search/?api=1&query=${selectedProperty.latitude},${selectedProperty.longitude}`} target="_blank" rel="noopener noreferrer">https://www.google.com/maps/search/?api=1&query={selectedProperty.latitude},{selectedProperty.longitude}</a>
+          </p>
+</div>
+
         </InfoWindow>
       )}
     </Map>
@@ -175,7 +179,7 @@ const MapContainer = (props) => {
   </div>
 </div>
 
-    
+
   );
 };
 
