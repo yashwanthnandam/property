@@ -159,9 +159,6 @@ class SearchBar extends React.Component {
 
           />
         </label>
-        <div className="instructions" style={{ marginLeft: "auto", textAlign: "right" }}>
-      <p>Go to the place > Click Search > Double Click on marker to get more details</p>
-        </div
         <div className="search-bar-container" style = {{display:"flex"}}>
   <div className="search-bar-row" >
     <PlacesAutocomplete
