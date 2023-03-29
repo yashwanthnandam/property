@@ -6,6 +6,8 @@ import  {
   getLatLng,
 } from 'react-places-autocomplete';
 import './style.css';
+import {Button, Alert, Card, Form } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -23,7 +25,7 @@ class SearchBar extends React.Component {
 
       },
       center:{lat:28.704060,lng:77.102490},
-      term: '' 
+      term: ''
     };
 
   }
@@ -34,18 +36,18 @@ class SearchBar extends React.Component {
     try {
       const results = await geocodeByAddress(address);
       const latLng = await getLatLng(results[0]);
-      
+
       this.setState({
         center: latLng,
       });
 
       this.props.onSelect(latLng);
-      
+
     } catch (error) {
       console.error('Error', error);
     }
   };
-  
+
 
   handleInputChange = (event) => {
     const { name, value, type } = event.target;
@@ -56,7 +58,7 @@ class SearchBar extends React.Component {
           [name]: !prevState.searchFilters[name]
         }
       }));
-      
+
     } else if (name === 'searchTerm') {
       this.setState(prevState => ({
         searchFilters: {
@@ -73,11 +75,11 @@ class SearchBar extends React.Component {
       }));
     }
   }
-  
-  
-  
 
-  
+
+
+
+
 
   handleFilterChange = (event) => {
     const { name, value } = event.target;
@@ -88,35 +90,35 @@ class SearchBar extends React.Component {
       }
     }));
   }
-  
-  
+
+
 
   handleSearch = async() => {
     console.log('search clicked');
     const { searchTerm, searchFilters } = this.state;
-    
+
     try {
       // console.log('api called in search bar')
       // const { minPrice, maxPrice, noBeds, noBaths, propertyType, mapBounds, buy, rent } = searchFilters;
       // let url = `http://127.0.0.1:8003/get_properties/?page_size=50&bedroom_num=${noBeds}&bathroomNum=${noBaths}&property_type=${propertyType}&search=${searchTerm}&buy=${buy}&rent=${rent}`;
-  
+
       // if (minPrice) {
       //   url += `&price_min=${minPrice}`;
       // }
       // if (maxPrice) {
       //   url += `&price_max=${maxPrice}`;
       // }
-  
+
       // if (mapBounds) {
       //   url += `&latitude_min=${mapBounds.getSouthWest().lat()}&latitude_max=${mapBounds.northEast.lat}&longitude_min=${mapBounds.getSouthWest().lng()}&longitude_max=${mapBounds.getNorthEast().lng()}`;
       // }
-  
+
       // if (this.state.rent) {
       //   url += '&rent=true';
       // } else if (this.state.buy) {
       //   url += '&buy=true';
       // }
-  
+
       // const response = await fetch(url);
       // const data = await response.json();
       // const properties = data.properties;
@@ -142,7 +144,7 @@ class SearchBar extends React.Component {
             name="buy"
             checked={this.state.searchFilters.buy}
             onChange={this.handleInputChange}
-            
+
 
           />
         </label>
@@ -157,6 +159,9 @@ class SearchBar extends React.Component {
 
           />
         </label>
+        <div className="instructions" style={{ marginLeft: "auto", textAlign: "right" }}>
+      <p>Go to the place > Click Search > Double Click on marker to get more details</p>
+        </div
         <div className="search-bar-container" style = {{display:"flex"}}>
   <div className="search-bar-row" >
     <PlacesAutocomplete
@@ -231,64 +236,68 @@ class SearchBar extends React.Component {
     </div>
 
     <div className="search-bar-input-container" >
-      <input
-        type="number"
-        name="minPrice"
-        placeholder="Min Price"
-        value={this.state.searchFilters.minPrice}
-        onChange={this.handleFilterChange}
-        className="search-bar-input"
-        style={{marginRight:'20px'}}
-      />
 
-      <input
-        type="number"
-        name="maxPrice"
-        placeholder="Max Price"
-        value={this.state.searchFilters.maxPrice}
-        onChange={this.handleFilterChange}
-        className="search-bar-input"
-        style={{marginRight:'20px'}}
+    <Form className="row g-3">
+      <Form.Group className="col-md-3">
+        <Form.Control
+          type="number"
+          name="minPrice"
+          placeholder="Min Price"
+          value={this.state.searchFilters.minPrice}
+          onChange={this.handleFilterChange}
+          className="form-control"
+        />
+      </Form.Group>
+      <Form.Group className="col-md-3">
+        <Form.Control
+          type="number"
+          name="maxPrice"
+          placeholder="Max Price"
+          value={this.state.searchFilters.maxPrice}
+          onChange={this.handleFilterChange}
+          className="form-control"
+        />
+      </Form.Group>
+      <Form.Group className="col-md-3">
+        <Form.Control
+          type="number"
+          name="noBeds"
+          placeholder="No of Beds"
+          value={this.state.searchFilters.noBeds}
+          onChange={this.handleFilterChange}
+          className="form-control"
+        />
+      </Form.Group>
+      <Form.Group className="col-md-3 d-flex align-items-end">
+        <Form.Control
+          type="number"
+          name="noBaths"
+          placeholder="No of Baths"
+          value={this.state.searchFilters.noBaths}
+          onChange={this.handleFilterChange}
+          className="form-control"
+        />
+        <Button onClick={this.handleSearch} className="btn btn-primary ms-3">
+          Search
+        </Button>
+      </Form.Group>
+    </Form>
 
-      />
-
-      <input
-        type="number"
-        name="noBeds"
-        placeholder="No of Beds"
-        value={this.state.searchFilters.noBeds}
-        onChange={this.handleFilterChange}
-        className="search-bar-input"
-        style={{marginRight:'20px'}}
-
-      />
-
-      <input
-        type="number"
-        name="noBaths"
-        placeholder="No of Baths"
-        value={this.state.searchFilters.noBaths}
-        onChange={this.handleFilterChange}
-        style={{marginRight:'20px'}}
-      />
-
-      <button onClick={this.handleSearch} className="search-bar-button">
-        Search
-      </button>
     </div>
-  
+
+
 </div>
 </div>
 
-          
-          
-          
-          
+
+
+
+
     );
   }
-  
-  
-  
+
+
+
 }
 
 export default SearchBar;

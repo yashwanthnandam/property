@@ -3,6 +3,28 @@
   <component name="ChangeListManager">
     <list default="true" id="ba765ac1-e863-4f5b-b063-34e8953d7d9c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/build/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/build/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/build/ghar_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/build/static/css/main.abd67dec.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/build/static/css/main.abd67dec.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/build/static/js/main.bab4bf61.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/build/static/js/main.bab4bf61.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/build/static/js/main.bab4bf61.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/node_modules/@babel/runtime/helpers/applyDecs2203R.js" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/node_modules/@babel/runtime/helpers/applyDecs2203R.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/node_modules/@babel/runtime/helpers/esm/applyDecs2203R.js" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/node_modules/@babel/runtime/helpers/esm/applyDecs2203R.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/node_modules/@babel/runtime/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/node_modules/@babel/runtime/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/public/ghar_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/src/components/SearchBar/searchbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/src/components/SearchBar/searchbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/src/components/SearchBar/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/src/components/SearchBar/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/src/screens/MapScreen/MapScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/src/screens/MapScreen/MapScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lease-app-downgrade/src/screens/MapScreen/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/lease-app-downgrade/src/screens/MapScreen/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lease-front/google-maps-intro" beforeDir="false" afterPath="$PROJECT_DIR$/lease-front/google-maps-intro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lease-front/google-maps-intro/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/lease-front/google-maps-intro/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lease-front/google-maps-intro/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/lease-front/google-maps-intro/yarn.lock" afterDir="false" />
@@ -32,11 +54,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lease-app-downgrade/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lease-app-downgrade" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lease-app-downgrade" />
       <recent name="$PROJECT_DIR$/lease-app-downgrade/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">

@@ -1,3 +1,4 @@
+
 .search-bar-container {
   display: flex;
   flex-wrap: wrap;
@@ -7,9 +8,29 @@
 .search-bar-row {
   display: flex;
   margin-bottom: 1em;
-  
+
 }
 
+@media (max-width: 768px) {
+  .map-container {
+   width: 30%;
+    top: 30rem;
+  }
+  .property-detail-container {
+    top: 30rem;
+    overflow: auto;
+  }
+}
+
+@media (min-width: 769px) {
+  .map-container {
+    width: 30%;
+  }
+  .property-detail-container {
+    width: 100%;
+    overflow: auto;
+  }
+}
 
 
 .suggestions-container {
@@ -23,7 +44,7 @@
 
 .suggestion-item {
   padding: 0.5em;
-  
+
 
 }
 
@@ -44,7 +65,7 @@
 .suggestion-dropdown-item{
   font-size: 2px;
   margin-left: 0px;
-  
+
 }
 
 .search-bar-input-container{

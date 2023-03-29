@@ -133,7 +133,7 @@ const MapContainer = (props) => {
                onSelect={(center) => handleSelect( properties, center)}
     />
   </div>
-  <div style={{ position: "absolute", top: "4rem", left: 0, bottom: 0, width: "69%" }}>
+  <div style={{ position: "absolute", top: "6rem", left: 0, bottom: 0, width: "69%" }}>
 
     <Map
       google={props.google}
@@ -171,7 +171,7 @@ const MapContainer = (props) => {
       )}
     </Map>
   </div>
-  <div style={{ position: "absolute", top: "4rem", right: 0, bottom: 0, width: "30%", backgroundColor: "white", padding: "1rem", overflow: "scroll" }}>
+  <div style={{ position: "absolute", top: "6rem", right: 0, bottom: 0, width: "30%", backgroundColor: "white", padding: "1rem", overflow: "scroll" }}>
   <PropertyDetail properties={properties} onPropertyHover={handlePropertyHover} />
 
 

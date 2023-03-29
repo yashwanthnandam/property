@@ -4,12 +4,8 @@ html, body {
     height: 100%;
     background-color: #fff;
   }
-  
-  #app-container {
-    position: relative;
-    height: 100%;
-  }
-  
+
+
   .search-bar-container {
     position: absolute;
     top: 0;
@@ -22,27 +18,41 @@ html, body {
     display: flex;
     flex-wrap: wrap;
   }
-  
-  .map-container {
-    position: absolute;
-    top: 6rem;
-    left: 0;
-    bottom: 0;
-    width: 69%;
-  }
-  
-  .property-detail-container {
-    position: absolute;
-    top: 6rem;
-    right: 0;
-    bottom: 0;
-    width: 30%;
-    background-color: #f2f2f2;
-    padding: 1rem;
-    overflow: scroll;
-  }
-  
+
+
+  @media (max-width: 390px) {
   .map {
-    height: 100%;
+  position: "relative",
+    width: 30%;
+    top: 10rem;
+    margin-top: 50%;
   }
-  
+  .property-detail-container {
+  position: "absolute",
+    width: 70%;
+    overflow: auto;
+  }
+}
+
+@media (min-width: 390px) {
+  .map {
+  position: "relative",
+    width: 70%;
+    top: 10rem;
+  }
+  .property-detail-container {
+  position: "absolute",
+    width: 30%;
+    overflow: auto;
+  }
+}
+
+.mapscreen{
+display: flex;
+}
+.map{
+width: 60%;
+}
+
+
+
